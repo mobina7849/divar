@@ -1,0 +1,178 @@
+$coler-primary:#a62626;
+$coler-secodary:#a0a0a0;
+$coler-borders:#EBEBEB;
+%flex-align-center{
+    display: flex;
+    align-items: center;
+}
+a,a:hover,a:focus{
+    text-decoration: none;
+    color: unset;
+}
+@font-face {
+    font-family:dana;
+    src: url(../../assets/font/dana-regular.woff2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:dana;
+}
+.fontAwesome {
+    font-family: dana, 'FontAwesome';
+}
+iconify-icon{
+    margin-left: 10px;
+
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 12%);
+    padding: 0 20px;
+    position:sticky;
+    top: 0;
+    background-color: #fff;
+    .navside{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $coler-secodary;
+       // position: sticky;
+        .navbar_location{
+            @extend %flex-align-center;
+        }
+        .navbar_category{
+            @extend %flex-align-center;
+        }
+        .navbar_inputSearch{
+            input{
+                border: none;
+                background-color: #F5F5F5;
+                width: 500px;
+                padding: 10px;
+                border-radius: 5px;
+                ::placeholder{
+                    color: #C3C3C3;
+                }
+            }
+        }
+        .navbar_login{
+            @extend %flex-align-center;
+            justify-content: space-between;
+
+        }
+        .navbar_chat{
+            @extend %flex-align-center;
+            justify-content: space-between;
+        }
+        .navbar_tabligh{
+            padding: 7px 15px;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+            background-color:$coler-primary;
+        }
+
+    }
+    .nav_right{
+        width: 60%;
+
+    }
+    .nav_left{
+        width: 35%;
+
+    }
+
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    aside{
+        position: fixed;
+        width: 280px;
+        .side{
+            position: fixed;
+            padding: 10px 20px;
+            width: 280px;
+            //border: 1px solid red;
+            .side_header{
+                padding: 10px 5px;
+            }
+            .side_list{
+                list-style: none;
+                border-bottom: 1px solid $coler-borders;
+                .side_list_item{
+                    padding: 10px 5px;
+                    color: $coler-secodary;
+                    display: flex;
+                    align-items: center;
+
+                }
+            }
+
+        }
+    }
+    .container_cards{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        .header_card{
+            text-align: left;
+            color: $coler-secodary;
+            margin-left: 40px;
+
+        }
+        .list_cards{
+            //width: 70%;
+            margin-right: 300px;
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            border-top: 1px solid $coler-borders;
+            //padding-top: 20px;
+            padding:20px 20px 0;
+
+            .card{
+                border: 1px solid #EBEBEB;
+                width: 320px;
+                height: 180px;
+                border-radius: 4px;
+                padding: 10px;
+                .card_inside{
+                    height: 160px;
+                    //width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .card_content{
+                        display: flex;
+                        flex-direction: column;
+                        .card_content_header{
+                            margin-bottom: 80px;
+                        }
+                        .card_content_p{
+                            margin-bottom: 10px;
+                            color: $coler-secodary;
+                        }
+                        .card_content_subp{
+                            color: $coler-secodary;
+
+                        }
+                    }
+                    .card_img{
+                        .img{
+                            width: 136px;
+                            height: 136px;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
